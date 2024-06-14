@@ -2,7 +2,7 @@ import "./App.css";
 import { useState } from "react";
 import CreateBatchModal from "./createBAtchModal";
 import backgroundUrl from "./assets/images";
-import Tabs from "./components/Tabs";
+import Tabs from "./components/tabs";
 
 function App() {
   const [modalOpen, setModalOpen] = useState(false);
