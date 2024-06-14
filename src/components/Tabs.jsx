@@ -1,31 +1,35 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import Popup from './Popup';
 
 const Tabs = () => {
-    const [activeTab, setactiveTab] = useState("list1")
-    const tabslist = ["list1", "list2", "list3", "list4"]
+    const [activeTab, setActiveTab] = useState("List 1");
+    const [showPopUp, setShowPopUp] = useState(false);
+    const tabsList  = ["List 1", "List 2", "List 3", "List 4"];
+
     return (
         <>
             <div>
                 <div>
-                    {tabslist.map((tab) => {
-                        return (
-                            <button key={tab} className={`border p-3 m-0 mb-2 ${activeTab==tab? 'bg-blue-500 text-white px-6': ""}`} onClick={() => setactiveTab(tab)}>{tab}</button>
-                        )
-
-                    })}
+                    {tabsList.map((tab) => (
+                        <button
+                            key={tab}
+                            className={`border rounded-lg p-3 m-0 mb-4 ${activeTab === tab ? 'bg-pink-800 text-white px-6' : ''}`}
+                            onClick={() => setActiveTab(tab)}
+                        >
+                            {tab}
+                        </button>
+                    ))}
                 </div>
 
                 <div>
-                    {activeTab == "list1" && (<div> this is list1</div>)}
-                    {activeTab == "list2" && (<div> this is list2</div>)}
-                    {activeTab == "list3" && (<div> this is list3</div>)}
-                    {activeTab == "list4" && (<div> this is list4</div>)}
+                    {activeTab === "List 1" && (<div>this is List 1</div>)}
+                    {activeTab === "List 2" && (<Popup showPopUp={showPopUp} setShowPopUp={setShowPopUp} />)}
+                    {activeTab === "List 3" && (<div>this is List 3</div>)}
+                    {activeTab === "List 4" && (<div>this is List 4</div>)}
                 </div>
-
             </div>
-
         </>
-    )
+    );
 }
 
-export default Tabs
+export default Tabs;

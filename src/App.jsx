@@ -29,7 +29,7 @@ function App() {
                 onClick={() => {
                   setModalOpen(true);
                 }}
-                className="flex px-20 py-9 mt-4 mx-auto bg-green-500 hover:bg-green-600 text-white font-bold rounded border-orange-800 border-8"
+                className="flex px-6 py-3 mt-4 mx-auto hover:bg-slate-100 hover:text-black text-white hover:font-normal font-bold rounded-lg border"
               >
                 Click me
               </button>
