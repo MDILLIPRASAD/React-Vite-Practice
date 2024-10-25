@@ -13,7 +13,7 @@ const Popup = ({ showPopUp, setShowPopUp }) => {
     return (
         <div>
             <button
-                className='border p-3 rounded-lg mb-4 text-white hover:bg-slate-100 hover:text-black hover:font-normal font-bold'
+                className='border p-3 rounded-lg mb-4 text-white hover:bg-gray-300 hover:text-black hover:font-normal font-bold'
                 onClick={() => setShowPopUp(true)}
             >
                 Submit an Email
@@ -21,7 +21,7 @@ const Popup = ({ showPopUp, setShowPopUp }) => {
 
             {showPopUp && (
                 <div className='fixed inset-0 flex items-center justify-center bg-black bg-opacity-50'>
-                    <div className='bg-white text-black p-8 rounded-lg max-w-md'>
+                    <div className='bg-gray-300 bg-transparent-50 text-black p-8 rounded-xl max-w-md'>
                         <h2 className='text-xl mb-4'>Form Title</h2>
                         <form onSubmit={handleSubmit}>
                             <div className='mb-4 flex flex-col'>
